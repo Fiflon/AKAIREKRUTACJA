@@ -1,0 +1,145 @@
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - CSS
+
+    Spróbuj zmodyfikować poniższy plik ze stylami tak, by upiększyć formularz na stronie.
+    Jako inspiracji możesz skorzystać z szablonu znajdującego się w pliku img/layout.png
+    Nie wymagamy, by wykonać identyczny layout. Liczy się kreatywność.
+
+    Przy wykonywaniu zadania można zmienić strukturę pliku index.html.
+    Pamiętaj, że w takim wypadku będzie trzeba zadbać o dostosowanie odpowiednich selektorów.
+
+    Jeśli korzystasz z preprocessorów takich jak Sass/Less, również możesz się tym pochwalić.
+
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: "Muli", cursive;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 90%
+  );
+  background-attachment: fixed;
+}
+
+#task-frontend {
+  background-color: #00000034;
+
+  max-width: 900px;
+  padding: 2.5rem;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0rem 0rem 1rem 0.3rem #7d8491;
+}
+
+#task-frontend .basic-title {
+  font-size: x-large;
+  margin-bottom: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgb(238, 174, 202);
+  text-shadow: 2px 2px 4px #7d8491;
+}
+
+#task-frontend .form-line {
+  border: 0.5px solid #0000004d;
+}
+
+#task-frontend form > label {
+  text-transform: uppercase;
+  margin: 10px auto 0 auto;
+}
+
+#task-frontend input[type="text"],
+#task-frontend input[type="email"] {
+  font-family: "Muli", cursive;
+  display: block;
+  margin: 10px auto;
+  padding-left: 10px;
+  color: rgb(59 59 59);
+  border: 1px solid rgb(165, 120, 139);
+  border-radius: 10px;
+  background-color: rgb(238, 174, 202);
+  width: 250px;
+  height: 30px;
+  transition: 0.18s ease-out;
+}
+
+#task-frontend input[type="text"]::placeholder,
+#task-frontend input[type="email"]::placeholder {
+  color: rgb(165, 120, 139);
+}
+#task-frontend input[type="text"]:focus,
+#task-frontend input[type="email"]:focus {
+  outline: none;
+  color: rgb(150, 150, 150);
+  background-color: rgb(197, 142, 166);
+}
+
+#task-frontend input[type="submit"] {
+  color: rgb(59 59 59);
+  font-family: "Muli", cursive;
+  background-color: rgb(238, 174, 202);
+  border-radius: 2px;
+  margin-top: 30px;
+
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border: none;
+}
+
+#task-frontend input[type="submit"]:hover {
+  background-color: rgb(197, 142, 166);
+  transition: 0.18s ease-out;
+}
+
+#task-frontend input[type="submit"]:active {
+  border: 1px solid rgb(136, 98, 115);
+}
+
+#sections {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 200x;
+  gap: 4px;
+}
+
+#sections span {
+  margin-bottom: 10px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+#sections input[type="checkbox"] {
+  accent-color: rgb(197, 142, 153);
+  background: #799726;
+}
